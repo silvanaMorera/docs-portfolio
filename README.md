@@ -44,6 +44,7 @@ This repository includes production-ready examples of:
 ## 📫 Contact
 
 - [LinkedIn](https://www.linkedin.com/in/YOURUSERNAME)  
+- [GitHub](silvanamorera.github.io)
 - Open to remote opportunities in API documentation, DevTools, or platform teams.
 
 ---
