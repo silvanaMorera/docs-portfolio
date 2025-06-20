@@ -1,6 +1,6 @@
 # 🛠️ Technical Writing Portfolio – Silvana Morera
 
-Hi, I’m Silvana — a technical writer specializing in developer-focused documentation. I work with modern docs-as-code workflows, API standards like OpenAPI, and automation tools to deliver scalable, clean, and reliable documentation for engineering teams.
+Hi, I’m Silvana Morera Claramunt— a technical writer specializing in developer-focused documentation. I work with modern docs-as-code workflows, API standards like OpenAPI, and automation tools to deliver scalable, clean, and reliable documentation for engineering teams.
 
 ---
 
