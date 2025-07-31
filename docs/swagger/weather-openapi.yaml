@@ -1,0 +1,111 @@
+openapi: 3.0.4
+info:
+  title: OpenWeather API Sample
+  description: >
+    This is a sample documentation for the OpenWeather API.  
+    It allows users to retrieve real time weather data based on location inputs.  
+    Includes query options for city name, ZIP, or geographic coordinates.
+  version: 1.0.0
+  contact:
+    name: Silvana Morera Claramunt
+    email: silvana.morera@gmail.com
+
+servers:
+  - url: https://api.openweathermap.org/data/2.5
+    description: Production server
+
+paths:
+  /weather:
+    get:
+      summary: Get current weather
+      description: Returns current weather based on a location.
+      parameters:
+        - name: appid
+          in: query
+          required: true
+          description: Your API key
+          schema:
+            type: string
+        - name: q
+          in: query
+          required: false
+          description: City name (not used with ZIP or lat/lon)
+          schema:
+            type: string
+        - name: zip
+          in: query
+          required: false
+          description: ZIP and country code (e.g. `10001,us`)
+          schema:
+            type: string
+        - name: lat
+          in: query
+          required: false
+          description: Latitude (used with `lon`)
+          schema:
+            type: number
+            format: float
+        - name: lon
+          in: query
+          required: false
+          description: Longitude (used with `lat`)
+          schema:
+            type: number
+            format: float
+        - name: units
+          in: query
+          required: false
+          description: Units of measurement (`standard`, `metric`, `imperial`)
+          schema:
+            type: string
+            enum: [standard, metric, imperial]
+      responses:
+        '200':
+          description: Successful weather data response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeatherResponse'
+        '401':
+          description: Unauthorized – invalid or missing API key
+        '403':
+          description: Forbidden – API key is blocked or inactive
+        '429':
+          description: Too Many Requests – rate limit exceeded
+
+components:
+  schemas:
+    WeatherResponse:
+      type: object
+      properties:
+        name:
+          type: string
+          description: City name
+        main:
+          type: object
+          properties:
+            temp:
+              type: number
+              format: float
+              description: Current temperature
+            humidity:
+              type: integer
+              description: Humidity percentage
+        weather:
+          type: array
+          items:
+            type: object
+            properties:
+              main:
+                type: string
+                description: Weather group (e.g. Clouds)
+              description:
+                type: string
+                description: Human-readable description
+        wind:
+          type: object
+          properties:
+            speed:
+              type: number
+              format: float
+              description: Wind speed in m/s
