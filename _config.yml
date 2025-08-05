@@ -23,8 +23,8 @@ email: silvana.morera@gmail.com
 description: Developer-focused documentation, API references, and technical tutorials.
 github_username: silvanaMorera
 
-baseurl: ""
-url: ""
+baseurl: "/docs-portfolio"
+url: "https://silvanamorera.github.io"
 
 # Build settings
 theme: minima

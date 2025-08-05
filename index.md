@@ -13,10 +13,10 @@ This portfolio showcases clean, real world documentation I’ve written using pu
 
 ## Featured API Projects
 
-- [ OpenWeather API Sample](/api/weather/)  
+- [ OpenWeather API Sample]({{ site.baseurl }}/api/weather/)  
   Real time weather data using query parameters and curl samples.
 
-- [CoinGecko API Sample](/api/coingecko/)  
+- [CoinGecko API Sample]({{ site.baseurl }}/api/coingecko/)  
   Cryptocurrency market data with pagination, parameters, and JSON responses.
 
 ---
